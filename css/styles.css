@@ -117,11 +117,6 @@ li {
   list-style: none;
 }
 
-.i-am-items {
-  position: relative;
-  right: 20px;
-}
-
 button,
 .button {
   border: none;
