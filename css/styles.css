@@ -114,7 +114,7 @@ a:focus {
 }
 
 li {
-  list-style-type: none;
+  list-style: none;
 }
 
 .i-am-items {
@@ -170,6 +170,20 @@ button:focus,
 
 main {
   text-align: center;
+}
+
+.skills-table {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  justify-content: space-around;
 }
 
 @keyframes color-change {
