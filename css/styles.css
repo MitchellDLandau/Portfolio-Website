@@ -181,6 +181,11 @@ td {
   justify-content: space-around;
 }
 
+.contact-links {
+  position: relative;
+  right: 20px;
+}
+
 @keyframes color-change {
   0% {
     fill: #edc655;
