@@ -17,10 +17,24 @@
   box-sizing: border-box;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  border-bottom: 2px solid var(--text-color);
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+main {
+  text-align: center;
+  margin-top: 140px;
+}
+
 .page-header {
   display: flex;
   width: 100%;
   padding: 20px;
+  background-color: var(--grid-background);
 }
 
 .page-header__item {
@@ -50,10 +64,20 @@
 
 .navigation-list__item--active {
   text-decoration: none;
+  border: 2px solid var(--text-color);
+}
+
+.navigation-list__item {
+  border: 1px solid var(--text-color);
+  border-radius: 3px;
+  padding: 10px;
+  background-color: var(--background-color);
 }
 
 hr {
   border: 1px solid var(--text-color);
+  position: fixed;
+  margin-top: 2px;
 }
 
 .project-list {
@@ -155,15 +179,12 @@ button:focus,
   height: auto;
   margin-right: 40px;
   border-radius: 50%;
+  margin-top: 
 }
 
 .profile {
   max-width: 700px;
   margin: 0 auto;
-  text-align: center;
-}
-
-main {
   text-align: center;
 }
 
