@@ -193,6 +193,8 @@ button:focus,
 .project-image {
   height: 150px;
   width: auto;
+  border-radius: 20%;
+  padding: 10px;
 }
 
 .skills-table {
