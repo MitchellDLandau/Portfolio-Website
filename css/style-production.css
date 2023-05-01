@@ -19,7 +19,7 @@ main {
   display: flex;
   width: 100%;
   padding: 20px;
-  background-color: #71aca3;
+  background-color: rgba(113, 172, 163, 0.85);
 }
 
 .page-header__item {
