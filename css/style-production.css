@@ -2,10 +2,24 @@
   box-sizing: border-box;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  border-bottom: 2px solid #011647;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+main {
+  text-align: center;
+  margin-top: 140px;
+}
+
 .page-header {
   display: flex;
   width: 100%;
   padding: 20px;
+  background-color: #71aca3;
 }
 
 .page-header__item {
@@ -35,10 +49,14 @@
 
 .navigation-list__item--active {
   text-decoration: none;
+  border: 2px solid #011647;
 }
 
-hr {
+.navigation-list__item {
   border: 1px solid #011647;
+  border-radius: 3px;
+  padding: 10px;
+  background-color: #befaf1;
 }
 
 .project-list {
@@ -54,6 +72,10 @@ hr {
 .grid-item:last-child {
   grid-column: 3 / 3;
   grid-row: 1 / 3;
+}
+
+.i-am-items {
+  margin-right: 40px;
 }
 
 body {
@@ -102,11 +124,6 @@ li {
   list-style: none;
 }
 
-.i-am-items {
-  position: relative;
-  right: 20px;
-}
-
 button {
   border: none;
   display: inline-block;
@@ -137,6 +154,10 @@ button {
   transition: opacity 0.3s;
 }
 
+.submit-contact {
+  margin: 20px;
+}
+
 button:hover,
 .button:hover {
   opacity: 80%;
@@ -160,7 +181,7 @@ button:focus,
   float: left;
   width: 250px;
   height: auto;
-  margin-right: 40px;
+  margin: auto;
   border-radius: 50%;
 }
 
@@ -168,10 +189,14 @@ button:focus,
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
+  margin-top: 220px;
 }
 
-main {
-  text-align: center;
+.project-image {
+  height: 150px;
+  width: auto;
+  border-radius: 20%;
+  padding: 10px;
 }
 
 .skills-table {
@@ -267,11 +292,26 @@ td {
   .project-list {
     grid-template-columns: 1fr;
   }
+
+  .navigation-list__item {
+    padding: 0;
+  }
+
+  .page-header__item:first-child {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    align-self: center;
+  }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .project-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  main {
+    margin-top: 280px;
   }
 }
 
