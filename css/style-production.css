@@ -182,7 +182,7 @@ button:focus,
   width: 250px;
   height: auto;
   margin: auto;
-  border-radius: 50%;
+  border-radius: 40%;
 }
 
 .profile {
