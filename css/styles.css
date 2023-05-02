@@ -156,7 +156,7 @@ button,
 }
 
 .submit-contact {
-  margin: 20px;
+  margin: 0 20%;
 }
 
 button:hover,
@@ -214,6 +214,20 @@ td {
 .contact-links {
   position: relative;
   right: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30%;
+}
+
+.standard-label {
+  margin: 5px;
+}
+
+textarea {
+  height: 80px;
 }
 
 @keyframes color-change {
