@@ -24,7 +24,6 @@ header {
   top: 0;
   border-bottom: 2px solid var(--text-color);
   justify-content: flex-end;
-  padding: 20px;
 }
 
 main {
@@ -95,6 +94,20 @@ main {
   margin-right: 40px;
 }
 
+.menu-button {
+  padding: 20px 70px;
+  position: relative;
+  margin-top: 5px;
+}
+
+.navigation-list__item {
+  display: none;
+}
+
+.menu-button:hover .navigation-list__item {
+  display: block;
+}
+
 body {
   background-color: var(--background-color);
   font-family: var(--font);
@@ -150,7 +163,7 @@ button,
   color: var(--button-text);
   text-decoration: none;
   font-size: 18px;
-  padding: 10px 20px;
+  padding: 10px 200px;
   border-radius: 3px;
   border-bottom: var(--border-edge);
   border-right: var(--border-edge);
@@ -174,7 +187,7 @@ button:active,
 
 button:focus,
 .button:focus {
-  border: 2px solid red;
+  border: 2px solid var(--text-color);
 }
 
 .profile-picture {
