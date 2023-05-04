@@ -19,6 +19,8 @@
 
 header {
   position: fixed;
+  width: auto;
+  height: 120px;
   top: 0;
   border-bottom: 2px solid var(--text-color);
   justify-content: flex-end;
@@ -34,7 +36,7 @@ main {
   display: flex;
   width: 100%;
   padding: 20px;
-  background-color: var(--grid-background);
+  background-color: rgba(113, 172, 163, 0.85);
 }
 
 .page-header__item {
@@ -216,6 +218,24 @@ td {
   right: 20px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20%;
+}
+
+.standard-label {
+  margin: 5px;
+}
+
+textarea {
+  height: 60px;
+}
+
+.submit-contact {
+  margin: 0 20%;
+}
+
 @keyframes color-change {
   0% {
     fill: #edc655;
@@ -282,7 +302,8 @@ td {
   }
 
   .navigation-list__item {
-    padding: 0;
+    padding: 2px;
+    margin: 2px;
   }
 
   .page-header__item:first-child {

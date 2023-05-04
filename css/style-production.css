@@ -8,6 +8,8 @@ header {
   border-bottom: 2px solid #011647;
   justify-content: flex-end;
   padding: 20px;
+  width: auto;
+  height: 120px;
 }
 
 main {
