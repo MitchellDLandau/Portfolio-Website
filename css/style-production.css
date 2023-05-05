@@ -417,6 +417,11 @@ textarea {
     -ms-grid-row-align: center;
     align-self: center;
   }
+
+  .menu-button {
+    padding: 10px 40px;
+    margin-top: 15px;
+  }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
