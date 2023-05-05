@@ -129,6 +129,7 @@ main {
 
 .menu-button:hover .navigation-list__item {
   display: block;
+  margin: 8px;
 }
 
 body {
