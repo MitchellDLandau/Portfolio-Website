@@ -18,6 +18,7 @@
   --font-weight: 400;
   --border-edge: 3px solid rgba(0, 0, 0, 0.2);
   --footer-image-size: 30px;
+  --error-message: rgb(243, 66, 96);
 }
 
 * {
@@ -283,6 +284,10 @@ textarea {
 
 .submit-contact {
   margin: 0 20%;
+}
+
+.error-message {
+  color: var(--error-message);
 }
 
 @-webkit-keyframes color-change {
