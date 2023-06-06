@@ -170,6 +170,14 @@ button:active,
   background-color: var(--button-active);
 }
 
+.navigation-list__item {
+  display: none;
+}
+
+.menu-button:hover .navigation-list__item {
+  display: block;
+}
+
 button:focus,
 .button:focus {
   border: 2px solid red;
