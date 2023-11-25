@@ -74,17 +74,22 @@ button:hover,
 
 /* This controls the menu bar and logo at the top of the page */
 
-.navigation-list__item {
-  display: none;
-  list-style-type: none;
-}
-
 li {
   list-style: none;
 }
 
 a:hover {
   text-decoration: none;
+}
+
+.menu-button:hover {
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .menu-button:hover .navigation-list__item {
@@ -125,6 +130,8 @@ button,
   padding: 10px;
   margin: 10px;
   background-color: var(--background-color);
+  display: none;
+  list-style-type: none;
 }
 
 .page-header__item:first-child {
@@ -163,7 +170,7 @@ header {
 
 main {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .profile {
@@ -291,7 +298,7 @@ textarea {
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
-  margin: 50px;
+  margin: 20px;
 }
 
 /* Media controls for sizes of screens */

@@ -25,11 +25,11 @@
         return false;
       }
       if (value.indexOf('@') === -1) {
-        showErrorMessage(emailInput, 'Email requires an @ sign');
+        showErrorMessage(emailInput, 'Email host name is required');
         return false;
       }
       if (value.indexOf('.') === -1) {
-        showErrorMessage(emailInput, 'What is your emails directory');
+        showErrorMessage(emailInput, 'What is your emails domain');
         return false;
       }
       showErrorMessage(emailInput, null);
@@ -65,9 +65,7 @@
     form.addEventListener('submit', (e) => {
       e.preventDefault(); 
       if (validateForm()) {
-        alert('Success!');
+        alert('Thank you for reaching out to me!');
       }
     })
-  
-    // THE RETURN STATEMENT HERE
   })();
