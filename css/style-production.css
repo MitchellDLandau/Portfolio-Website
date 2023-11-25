@@ -237,7 +237,6 @@ td {
   background-color: var(--grid-background);
   border-radius: 5px;
   margin: 15px;
-  height: 400px;
 }
 
 .grid-item:last-child {
