@@ -237,6 +237,7 @@ td {
   background-color: var(--grid-background);
   border-radius: 5px;
   margin: 15px;
+  height: 400px;
 }
 
 .grid-item:last-child {
@@ -247,9 +248,9 @@ td {
   grid-row: 1 / 3;
 }
 
-.project-six {
-  width: 30%;
-  height: auto;
+.project-six img {
+  width: 100%;
+  object-fit: contain;
 }
 
 /* This controls the contact page */
