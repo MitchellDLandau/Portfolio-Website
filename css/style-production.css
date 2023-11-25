@@ -247,6 +247,11 @@ td {
   grid-row: 1 / 3;
 }
 
+.project-six {
+  width: 30%;
+  height: auto;
+}
+
 /* This controls the contact page */
 
 .contact-links {

@@ -238,6 +238,10 @@ textarea {
   height: 80px;
 }
 
+.a-project {
+  background: red;
+}
+
 @keyframes color-change {
   0% {
     fill: #edc655;
