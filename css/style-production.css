@@ -4,7 +4,6 @@
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
-
 :root {
   --background-color: #befaf1;
   --text-color: #011647;
@@ -18,10 +17,99 @@
   --font-weight: 400;
   --border-edge: 3px solid rgba(0, 0, 0, 0.2);
   --footer-image-size: 30px;
-  --error-message: rgb(247, 75, 104);
 }
 
-/* Universal stylings for all pages */
+* {
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  border-bottom: 2px solid var(--text-color);
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+main {
+  text-align: center;
+  margin-top: 140px;
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(113, 172, 163, 0.85);
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+}
+
+.page-header__item:first-child {
+  height: 50px;
+  width: 300px;
+  border-radius: 5px;
+  align-self: center;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin: 15px;
+}
+
+.navigation-list__item--active {
+  text-decoration: none;
+  border: 2px solid var(--text-color);
+}
+
+.navigation-list__item {
+  border: 1px solid var(--text-color);
+  border-radius: 3px;
+  padding: 10px;
+  background-color: var(--background-color);
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  max-width: 100%;
+  grid-auto-rows: minmax(100px, auto);
+  margin: 20px;
+}
+
+.grid-item {
+  background-color: var(--grid-background);
+  grid-column: span 1;
+  grid-row: span 2;
+  width: 100%;
+}
+
+.grid-item img {
+  width: 100%; 
+  max-width: 100%;
+  height: auto; 
+}
+
+.grid-item:last-child {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.i-am-items {
+  margin-right: 40px;
+}
 
 body {
   background-color: var(--background-color);
@@ -45,6 +133,10 @@ h3 {
   font-weight: 700;
 }
 
+.web-span {
+  font-style: italic;
+}
+
 a {
   color: var(--not-visited-site);
 }
@@ -61,39 +153,8 @@ a:focus {
   text-decoration: none;
 }
 
-button:active,
-.button:active {
-  background-color: var(--button-active);
-}
-
-button:hover,
-.button:hover {
-  opacity: 80%;
-  cursor: pointer;
-}
-
-/* This controls the menu bar and logo at the top of the page */
-
 li {
   list-style: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-.menu-button:hover {
-  float: right;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.menu-button:hover .navigation-list__item {
-  display: block;
 }
 
 button,
@@ -109,99 +170,63 @@ button,
   border-radius: 3px;
   border-bottom: var(--border-edge);
   border-right: var(--border-edge);
-  -webkit-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
 }
 
-.menu-button {
-  padding: 15px 70px;
-  margin: 0 40px;
+.submit-contact {
+  margin: 0 20%;
 }
 
-.navigation-list__item--active {
-  text-decoration: none;
-  border: 2px solid var(--text-color);
+button:hover,
+.button:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+button:active,
+.button:active {
+  background-color: var(--button-active);
 }
 
 .navigation-list__item {
-  border: 1px solid var(--text-color);
-  border-radius: 3px;
-  padding: 10px;
-  margin: 10px;
-  background-color: var(--background-color);
   display: none;
-  list-style-type: none;
 }
 
-.page-header__item:first-child {
-  height: 50px;
-  width: 300px;
-  border-radius: 5px;
+.menu-button:hover .navigation-list__item {
+  display: block;
 }
 
-.page-header__item:last-child {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  text-align: right;
-}
-
-.page-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  padding: 20px;
-  background-color: rgba(113, 172, 163, 0.85);
-}
-
-header {
-  position: fixed;
-  top: 0;
-  border-bottom: 2px solid var(--text-color);
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  padding: 20px;
-}
-
-/* This will focus on the home page */
-
-main {
-  text-align: center;
-  margin-top: 120px;
-}
-
-.profile {
-  max-width: 700px;
-  margin: 0 auto;
-  margin-top: 140px;
+button:focus,
+.button:focus {
+  border: 2px solid red;
 }
 
 .profile-picture {
   float: left;
   width: 250px;
   height: auto;
-  margin-left: 10px;
+  margin: auto;
   border-radius: 50%;
 }
 
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 160px;
+}
+
 .project-image {
-  height: 150px;
+  height: 140px;
   width: auto;
   border-radius: 20%;
   padding: 10px;
 }
 
-.web-span {
-  font-style: italic;
-}
-
-/* This will focus on the about me page */
-
-.i-am-items {
-  margin-right: 40px;
+.skills-table {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
 table,
@@ -209,178 +234,41 @@ th,
 td {
   border: 1px solid var(--text-color);
   border-radius: 5px;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
-.skills-table {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-/* This controls the my work page */
-
-.project-list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 0 1fr 0 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 0;
-}
-
-.grid-item {
-  background-color: var(--grid-background);
-  border-radius: 5px;
-  margin: 15px;
-}
-
-.grid-item:last-child {
-  -ms-grid-column: 3;
-  grid-column: 3 / 3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1 / 3;
-}
-
-.project-six img {
-  width: 100%;
-  object-fit: contain;
-}
-
-/* This controls the contact page */
-
 .contact-links {
   position: relative;
+  /* vertical-align: middle; */
+  /* display: inline-block; */
   right: 20px;
 }
 
-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.contact-me {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-image {
+  vertical-align: middle;
+  width: 50px;
+  height: auto;
+  margin: 20px;
+}
+
+form {
+  display: flex;
   flex-direction: column;
   padding: 0 30%;
 }
 
-.submit-contact {
-  margin: 0 20%;
-}
-
 .standard-label {
-  margin: 7px;
+  margin: 5px;
 }
 
 textarea {
   height: 80px;
-}
-
-.error-message {
-  color: var(--error-message);
-  margin: 7px;
-}
-
-/* This will control the footer */
-
-.page-footer-image {
-  width: var(--footer-image-size);
-  height: auto;
-}
-
-.page-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
-  margin: 20px;
-}
-
-/* Media controls for sizes of screens */
-
-@media all and (max-width: 750px) {
-  .grid-item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
-}
-
-@media all and (min-width: 500px) and (max-width: 750px) {
-  .project-list {
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .page-header__item:first-child {
-    width: 250px;
-    height: auto;
-    border-radius: 5px;
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-  }
-
-  .menu-button {
-    padding: 10px 60px;
-    position: relative;
-    margin: 0 40px;
-  }
-
-  .grid-item {
-    margin: 10px;
-  }
-}
-
-@media all and (max-width: 500px) {
-  .project-list {
-    -ms-grid-columns: 1fr 20px 1fr;
-    grid-template-columns: 1fr;
-  }
-
-  .page-header__item:first-child {
-    width: 150px;
-    height: auto;
-    border-radius: 5px;
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-  }
-
-  .menu-button {
-    padding: 5px 40px;
-    position: relative;
-    margin: 0 40px;
-  }
-
-  .grid-item {
-    margin: 5px;
-  }
-}
-
-/* This controls the animation on the about page */
-
-@-webkit-keyframes color-change {
-  0% {
-    fill: #edc655;
-  }
-
-  50% {
-    fill: #fcffad;
-  }
-
-  100% {
-    fill: #f76414;
-  }
 }
 
 @keyframes color-change {
@@ -398,64 +286,97 @@ textarea {
 }
 
 .sun {
-  -webkit-animation: 4s color-change infinite alternate linear;
   animation: 4s color-change infinite alternate linear;
-}
-
-@-webkit-keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
-  }
-
-  to {
-    -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
-  }
 }
 
 @keyframes cloud-move {
   from {
-    -webkit-transform: translate(0, 50px);
     transform: translate(0, 50px);
   }
 
   to {
-    -webkit-transform: translate(200px, 50px);
     transform: translate(200px, 50px);
   }
 }
 
 .cloud-front {
-  -webkit-animation: 30s cloud-move infinite alternate linear;
   animation: 30s cloud-move infinite alternate linear;
-}
-
-@-webkit-keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
-  }
-
-  to {
-    -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
-  }
 }
 
 @keyframes cloud-move-reverse {
   from {
-    -webkit-transform: translate(446px, 48px);
     transform: translate(446px, 48px);
   }
 
   to {
-    -webkit-transform: translate(100px, 48px);
     transform: translate(100px, 48px);
   }
 }
 
 .cloud-back {
-  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
   animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.page-footer-image {
+  width: var(--footer-image-size);
+  height: var(--footer-image-size);
+}
+
+@media all and (max-width: 500px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .navigation-list__item {
+    padding: 0;
+  }
+
+  .page-header__item:first-child {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    align-self: center;
+  }
+
+  main {
+    padding: 0;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .project-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main {
+    margin-top: 280px;
+  }
+
+  main {
+    padding: 0;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .project-list {
+    grid-gap: 10px;
+  }
+
+  .grid-item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
 }
